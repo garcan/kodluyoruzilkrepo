@@ -26,6 +26,11 @@ code .
 ## Contributing 
 
 Pull requestler kabul edilir. Büyük değişiklikler için, lütfen önce neyi değiştirmek istediğinizi tartışmak için bana mail atınız. 
+
+
+--------------------------------------------------------------
+
+
 [Kodluyoruz](https://www.kodluyoruz.org/)
 ![Patika](https://patika-prod.s3.eu-central-1.amazonaws.com/staticFiles/patikaLogo.png)
 
