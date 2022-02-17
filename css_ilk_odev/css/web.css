@@ -1,0 +1,40 @@
+.navBar{
+    text-align: center;
+    font-size: 28px;
+    border:black;
+    border-style:dashed;
+    background-color: antiquewhite;
+}
+
+
+.urunler{
+    text-align: center;
+    font-size: larger;
+    list-style-position: inside; 
+}
+/* .urunler img {
+    height: 400px;
+} */
+
+
+body {
+    background-color: aqua;
+}
+.footerSide {
+    text-align: center;
+    font-size: 16px;
+    background-color: bisque;
+}
+.main_ {
+    text-align: center;
+    font-size: small;
+    font-family: monospace;
+}
+.main_ p {
+    font-size: large;
+}
+.main_ulas {
+    text-align: center;
+    color: brown;
+    font-size: larger;
+}
