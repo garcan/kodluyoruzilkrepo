@@ -1,3 +1,4 @@
+//www.patika.dev
 onLoad();
 // listemize ekleme yaptigimiz fonksiyon
 function newElement(){
