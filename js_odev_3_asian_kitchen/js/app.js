@@ -80,6 +80,15 @@ const menu = [
       "https://www.justonecookbook.com/wp-content/uploads/2011/10/Dorayaki-New-500x400.jpg",
     desc: `Red bean paste dessert, serving with honey.`,
   },
+  {
+    id: 10,
+    title: "Kuru Fasulye",
+    category: "Turkey",
+    price: 4.99,
+    img:
+      "https://www.justonecookbook.com/wp-content/uploads/2011/10/Dorayaki-New-500x400.jpg",
+    desc: `Kuru fasulye faydalıdır`,
+  },
 ];
 // ADIMLAR
 
@@ -91,13 +100,66 @@ const categories = menu.reduce(
       values.push(item.category);
     }
     return values;
-  },
-["ALL"]);
+  }, ["ALL"]);
 // console.log(categories);
+// her kategori icin buton tanımlanmasi lazim
+const btnContainer = document.querySelector(".btn-container");
 
-
+// for (let index = 0; index < categories.length; index++) {
+//   btnContainer.innerHTML += `<button class="btn btn-outline-dark btn-item" data-id="${categories[index]}"> ${categories[index]} </button>`;
+// }  
+const categoryBtns = categories.map((category) => {
+  return ` <button class="btn btn-outline-dark btn-item" data-id="${category}"> ${category} </button> `
+}).join("");
+btnContainer.innerHTML = categoryBtns;
 
 
 // ADIM (2): Kategori secimlerine gore ogeler html icine atilacak
-const btnContainer = document.querySelector(".btn-container");
 const section = document.querySelector(".section-center");
+
+
+// section.innerHTML = menuList(menu); // menu listeleniyor mu deneme
+// simdi sira kategori secimine gore menu ekrana basma isinde
+function categoryList(){
+    const filterBtns = document.querySelectorAll(".btn-item");
+    filterBtns.forEach((btn) => {
+      btn.addEventListener("click", (e) => {
+        const category = e.currentTarget.dataset.id;
+        const menuCategory = menu.filter((menuItem) => {
+          if (menuItem.category === category) {
+            return menuItem;
+          }
+        });//menu kategori alindi
+      if ( category === "ALL" ) {
+        section.innerHTML = menuList(menu);
+      }else{
+        section.innerHTML = menuList(menuCategory);
+      }
+      })
+    })
+}
+
+// menu listeleme fonksiyonu 
+function menuList(list) {
+  let diplayMenu = list.map((item) => {
+    return ` <div class="menu-items col-lg-6 col-sm-12">
+              <img
+                src=${item.img}
+                alt=${item.title}
+                class="photo"
+              />
+              <div class="menu-info">
+                <div class="menu-title">
+                  <h4>${item.title}</h4>
+                  <h4 class="price">${item.price}</h4>
+                </div>
+                <div class="menu-text">
+                  ${item.desc}
+                </div>
+              </div>
+            </div> `;
+  });
+  diplayMenu = diplayMenu.join("");
+  return diplayMenu;
+}
+categoryList();
