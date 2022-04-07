@@ -86,7 +86,7 @@ const menu = [
     category: "Turkey",
     price: 4.99,
     img:
-      "https://www.justonecookbook.com/wp-content/uploads/2011/10/Dorayaki-New-500x400.jpg",
+      "https://cdn.yemek.com/mncrop/940/625/uploads/2015/11/kuru-fasulye-yemekcom.jpg",
     desc: `Kuru fasulye faydalıdır`,
   },
 ];
