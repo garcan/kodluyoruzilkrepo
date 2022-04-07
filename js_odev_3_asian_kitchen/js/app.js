@@ -87,7 +87,7 @@ const menu = [
     price: 4.99,
     img:
       "https://cdn.yemek.com/mncrop/940/625/uploads/2015/11/kuru-fasulye-yemekcom.jpg",
-    desc: `Kuru fasulye faydalıdır`,
+    desc: `Dry beans are a cooked bean dish in Turkish cuisine. It is mainly made with white beans and olive oil, and is almost always used with onion and tomato paste. Sometimes other vegetables or meat can also be added.`,
   },
 ];
 // ADIMLAR
